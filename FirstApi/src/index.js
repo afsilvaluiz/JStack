@@ -4,8 +4,7 @@ const { URL } = require('url')
 const routes = require('./routes')
 
 const server = http.createServer((request, response) => {
-  const parsedUrl = new URL(`http://localhost:3000${request.url}`)
-  console.log(`Request method: ${request.method} | Endpoint: ${parsedUrl.pathname}`)
+  const parsedUrl = new URL(`http://localhost:3000${request.url}`)  
 
   let { pathname } = parsedUrl
   let id = null
@@ -22,8 +21,13 @@ const server = http.createServer((request, response) => {
   ))
 
   if (route) {
-    request.query = parsedUrl.query
+    request.query = Object.fromEntries(parsedUrl.searchParams)
     request.params = { id }
+
+    response.send = (statusCode, body) => {
+      response.writeHead(statusCode, { 'Content-Type': 'application/json' })
+      response.end(JSON.stringify(body))
+    }
 
     route.handler(request, response)
   } else {
