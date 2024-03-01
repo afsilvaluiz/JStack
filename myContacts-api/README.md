@@ -25,5 +25,3 @@ A CRUD application was developed using Node.js and Express to manage contacts an
 
 > Note: All parameters sent and received in the request and response body are in `JSON` format."
 
-
-myContacts-api/.github/categories.png
