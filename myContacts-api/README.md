@@ -2,7 +2,7 @@
     <img src=".github/api.svg" title="myContacts API" alt="" width="45px" align="center" />
     myContacts API
 </h1>
-<br>
+
 
 <p align="center">
  <a href="#-about">About</a> |
