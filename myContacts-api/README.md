@@ -19,8 +19,8 @@ A CRUD application was developed using Node.js and Express to manage contacts an
 ## 🔀 Routes
 <br>
 
-<img title="Routes" src=".github/contacts.png" width="45%"  alt='contacts routes'></img>
-<img title="Routes" src=".github/categories.png" width="45%"  alt='categories routes'></img>
+<img title="Routes" src=".github/contacts.jpg" width="45%"  alt='contacts routes'></img>
+<img title="Routes" src=".github/categories.jpg" width="45%"  alt='categories routes'></img>
 
 
 > Note: All parameters sent and received in the request and response body are in `JSON` format."
