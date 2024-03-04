@@ -4,16 +4,16 @@ const user = {
   age: 41,
   instagram: 'afsilvaluiz',
   skills: ['Front-end', 'Back-end', '3d-modeling'],
-  full_name: 'Full name',
+  full_name: 'Luiz Silva',
 };
 
 // Destructuring 
-const { firstName, lastName, skills } = user;
+const { firstName, lastName, age, skills } = user;
 
 // RENAME ATTRIBUTE
 const { full_name: fullName } = user;
 
 // GET BY POSITION
-const [primary, secondary, tertiary, quaternary] = skills;
+const [primary, secondary, tertiary] = skills;
 
-console.log(firstName + ' ' + lastName);
+console.log(fullName);
