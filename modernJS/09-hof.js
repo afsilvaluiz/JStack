@@ -9,17 +9,17 @@ const array = [
 // .find
 // IF THERE IS AN ELEMENT THAT SATISFIES THE CONDITION, THAT ELEMENT IS RETURNED
 // IF THERE ARE MULTIPLE ELEMENTS THAT SATISFY THE CONDITION, THE FIRST ONE IS RETURNED
-const find = array.find((product) => {
-  return product.name === 'Magic Mouse';
-});  
+const find = array.find((product) => product.price > 1000);
 
-console.log({find})
+// console.log({ find })
 
 // .findIndex
 // IF THERE IS AN ELEMENT THAT SATISFIES THE CONDITION, THE INDEX OF THE ELEMENT IS RETURNED
 // IN THIS CASE, THE POSITION IN THE ARRAY
 // IF THERE ARE MULTIPLE ELEMENTS THAT SATISFY THE CONDITION, THE FIRST ONE IS RETURNED
 const findIndex = array.findIndex((product) => product.name === 'Iphone');
+
+console.log({ findIndex })
 
 
 // .some
