@@ -1,15 +1,19 @@
 // HIGHER ORDERS FUNCTIONS
 
 const array = [
-  { product: 'Iphone', price: 5000, quantity: 2 },
-  { product: 'Macbook Pro', price: 17000, quantity: 1 },
-  { product: 'Magic Mouse', price: 600, quantity: 6 },
+  { name: 'Iphone', price: 5000, quantity: 2 },
+  { name: 'Macbook Pro', price: 17000, quantity: 1 },
+  { name: 'Magic Mouse', price: 600, quantity: 6 },
 ]
 
 // .find
 // IF THERE IS AN ELEMENT THAT SATISFIES THE CONDITION, THAT ELEMENT IS RETURNED
 // IF THERE ARE MULTIPLE ELEMENTS THAT SATISFY THE CONDITION, THE FIRST ONE IS RETURNED
-const find = array.find((product) => product.name === 'Iphone');
+const find = array.find((product) => {
+  return product.name === 'Magic Mouse';
+});  
+
+console.log({find})
 
 // .findIndex
 // IF THERE IS AN ELEMENT THAT SATISFIES THE CONDITION, THE INDEX OF THE ELEMENT IS RETURNED
