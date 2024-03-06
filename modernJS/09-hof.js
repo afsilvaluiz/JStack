@@ -18,8 +18,8 @@ const find = array.find((product) => product.price > 1000);
 // IN THIS CASE, THE POSITION IN THE ARRAY
 // IF THERE ARE MULTIPLE ELEMENTS THAT SATISFY THE CONDITION, THE FIRST ONE IS RETURNED
 const findIndex = array.findIndex((product) => product.name === 'Magic Mouse');
-
-console.log({ findIndex })
+// console.log({ findIndex })
+// console.log('Product:', array[findIndex])
 
 
 // .some
