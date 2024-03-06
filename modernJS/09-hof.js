@@ -21,11 +21,12 @@ const findIndex = array.findIndex((product) => product.name === 'Magic Mouse');
 // console.log({ findIndex })
 // console.log('Product:', array[findIndex])
 
-
 // .some
 // CHECKS IF ANY ELEMENT IN THE ARRAY MATCHES THE CONDITION
 // RETURNS A BOOLEAN
-const some = array.some((product) => product.name === 'Iphone');
+const some = array.some((product) => product.name === 'Magic Mouse');
+
+console.log({some})
 
 // .every
 // CHECKS IF EVERY ELEMENT IN THE ARRAY MATCHES THE CONDITION
