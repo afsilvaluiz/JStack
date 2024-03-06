@@ -13,9 +13,9 @@ const startsWith = tech.startsWith('no'); // MATCHES THE CHARACTER SEQUENCE
 // AT THE BEGINNING OF A STRING, OR A SINGLE CHARACTER
 // CASE SENSITIVE
 // BOOLEAN
-console.log({ startsWith });
 
-const endsWith = tech.endsWith('Node'); // MATCHES THE CHARACTER SEQUENCE
+const endsWith = tech.endsWith('s'); // MATCHES THE CHARACTER SEQUENCE
 // AT THE END OF A STRING, OR A SINGLE CHARACTER
 // CASE SENSITIVE
 // BOOLEAN
+console.log({ endsWith });
