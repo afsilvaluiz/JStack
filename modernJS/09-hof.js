@@ -3,7 +3,7 @@
 const array = [
   { name: 'Iphone', price: 5000, quantity: 2 },
   { name: 'Macbook Pro', price: 17000, quantity: 1 },
-  { name: 'Magic Mouse', price: 600, quantity: 6 },
+  { name: 'Magic Mouse', price: 1000, quantity: 6 },
 ]
 
 // .find
@@ -24,14 +24,15 @@ const findIndex = array.findIndex((product) => product.name === 'Magic Mouse');
 // .some
 // CHECKS IF ANY ELEMENT IN THE ARRAY MATCHES THE CONDITION
 // RETURNS A BOOLEAN
-const some = array.some((product) => product.name === 'Magic Mouse');
-
-console.log({some})
+const some = array.some((product) => product.price < 1000);
+// console.log({ some })
 
 // .every
 // CHECKS IF EVERY ELEMENT IN THE ARRAY MATCHES THE CONDITION
 // RETURNS A BOOLEAN
 const every = array.every((product) => product.name === 'Iphone');
+
+console.log({ every })
 
 
 // .map
