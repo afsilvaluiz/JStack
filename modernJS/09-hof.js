@@ -51,7 +51,9 @@ const map = array.map((product) => {
 
 // .filer
 // RETURNS A NEW ARRAY THAT MEETS THE CONDITIONS PASSED IN THE FUNCTION
-const filter = array.filter((product) => product.price > 999);
+const filter = array.filter((product) => product.quantity > 1);
+
+console.log({ filter })
 
 
 // .reduce
