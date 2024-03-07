@@ -46,7 +46,7 @@ const map = array.map((product) => {
   }
 });
 
-console.log({ map });
+// console.log({ map });
 
 
 // .filer
