@@ -46,6 +46,8 @@ const map = array.map((product) => {
   }
 });
 
+console.log({ map });
+
 
 // .filer
 // RETURNS A NEW ARRAY THAT MEETS THE CONDITIONS PASSED IN THE FUNCTION
