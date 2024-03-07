@@ -55,7 +55,6 @@ const filter = array.filter((product) => product.quantity > 1);
 
 // console.log({ filter })
 
-
 // .reduce
 // REDUCES AN ARRAY TO A SPECIFIC TYPE OF DATA
 // SECOND PARAMETER SPECIFIES THE TYPE OF DATA TO WHICH THE ARRAY WILL BE REDUCED
@@ -64,6 +63,8 @@ const filter = array.filter((product) => product.quantity > 1);
 // ACCUMULATOR IS A VARIABLE TO STORE THE FINAL DATA TO BE DISPLAYED
 // IN OTHER WORDS, WE CAN BUILD THE RESULT IN WHICH THE ARRAY WILL BE REDUCED
 // FROM THIS ACCUMULATOR
-const accumulator = array.reduce((accumulator, product) => {
+const reduce = array.reduce((accumulator, product) => {
   return accumulator + (product.quantity * product.price);
 }, 0);
+
+console.log({ reduce });
