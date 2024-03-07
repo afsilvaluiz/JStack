@@ -2,8 +2,8 @@
 
 const array = [
   { name: 'Iphone', price: 5000, quantity: 2 },
-  { name: 'Macbook Pro', price: 17000, quantity: 1 },
-  { name: 'Magic Mouse', price: 1000, quantity: 6 },
+  { name: 'Macbook Pro', price: 20000, quantity: 1 },
+  { name: 'Magic Mouse', price: 1001, quantity: 5 },
 ]
 
 // .find
