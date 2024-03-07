@@ -32,8 +32,7 @@ const some = array.some((product) => product.price < 1000);
 // RETURNS A BOOLEAN
 const every = array.every((product) => product.name === 'Iphone');
 
-console.log({ every })
-
+// console.log({ every })
 
 // .map
 // ALWAYS RETURNS THE SAME NUMBER OF ELEMENTS AS THE BASE ARRAY
