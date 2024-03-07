@@ -53,7 +53,7 @@ const map = array.map((product) => {
 // RETURNS A NEW ARRAY THAT MEETS THE CONDITIONS PASSED IN THE FUNCTION
 const filter = array.filter((product) => product.quantity > 1);
 
-console.log({ filter })
+// console.log({ filter })
 
 
 // .reduce
