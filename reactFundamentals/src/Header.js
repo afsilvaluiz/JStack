@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Header({ title }) {
+export default function Header(props) {
   return (
     <>
-      <h1>{title}</h1>
-      <h2>Posts of the week</h2>
+      <h1>{props.title}</h1>
+      {props.children}
     </>
   )
 }
