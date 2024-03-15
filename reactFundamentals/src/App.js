@@ -1,12 +1,12 @@
 import React from "react";
 
 import Post from "./Post";
+import Header from "./Header";
 
 function App() {
   return (
     <>
-      <h1>Haura's blog</h1>
-      <h2>Posts of the week</h2>
+      <Header />      
 
       <hr />
 
