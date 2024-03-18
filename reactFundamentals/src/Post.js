@@ -2,15 +2,13 @@ import React from "react"
 import PropTypes from 'prop-types';
 
 export default function Post(props) {
-  if (props.post.read) {
-    return <h2>{props.post.title} It has been read</h2>
-  }
 
   return (
     <>
       <article>
         <strong>
-          {props.post.read ? <s>{props.post.title}</s> : props.post.title}
+          {props.post.read && <s>{props.post.title}</s>}
+          {!props.post.read && props.post.title}
         </strong>
         <button onClick={() => props.onRemove(props.post.id)}>
           Remove
