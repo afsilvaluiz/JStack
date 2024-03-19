@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import Header from "./Header";
 import Post from "./Post";
-import { ThemeProvider } from './ThemeContext'
+import { ThemeProvider } from './ThemeContext';
+
+import styles from './App.scss';
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2>
+        <h2 className={styles.title}>
           Posts of the week
           <button onClick={handleRefresh}>Update</button>
         </h2>
