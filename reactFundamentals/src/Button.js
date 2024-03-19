@@ -1,13 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+
+import { ThemeContext } from './ThemeContext';
 
 export default function Button(props) {
-  console.log(props.theme)
-
-  const theme = props.theme;
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <button 
+    <button
       onClick={props.onClick}
       style={{
         color: theme === 'dark' ? '#fff' : '#000',
@@ -20,7 +20,6 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  theme: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
 };
