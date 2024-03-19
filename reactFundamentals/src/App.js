@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import Post from "./Post";
 import Header from "./Header";
+import Post from "./Post";
+import { ThemeProvider } from './ThemeContext'
+
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
   const [posts, setPosts] = useState([
     { id: Math.random(), title: 'Title#01', subtitle: 'Sub#01', likes: 20, read: false },
     { id: Math.random(), title: 'Title#02', subtitle: 'Sub#02', likes: 10, read: true },
@@ -13,17 +13,9 @@ function App() {
     { id: Math.random(), title: 'Title#04', subtitle: 'Sub#04', likes: 50, read: true },
   ]);
 
-  function handleToggleTheme() {
-    setTheme((prevState) => (
-      prevState === 'dark'
-      ? 'light'
-      : 'dark'
-    ));
-  }
-  
   function handleRefresh() {
     setPosts((prevState) => [
-      ...prevState, 
+      ...prevState,
       {
         id: Math.random(),
         title: `Title#0${prevState.length + 1}`,
@@ -40,11 +32,8 @@ function App() {
   }
 
   return (
-    <>
-      <Header
-        theme={theme}
-        onToggleTheme={handleToggleTheme}
-      >
+    <ThemeProvider>
+      <Header>
         <h2>
           Posts of the week
           <button onClick={handleRefresh}>Update</button>
@@ -59,11 +48,9 @@ function App() {
           likes={post.likes}
           onRemove={handleRemovePost}
           post={post}
-          theme={theme}     
         />
       ))}
-
-    </>
+    </ThemeProvider>
   )
 }
 
