@@ -4,7 +4,7 @@ import { ThemeProvider } from '../../context/ThemeContext';
 import Header from "../Header";
 import Post from "../Post";
 
-import styles from './App.scss';
+import { Title } from "./styles";
 
 function App() {
   const [posts, setPosts] = useState([
@@ -39,10 +39,10 @@ function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2 className={styles.title}>
+        <Title as='h2'> 
           Posts of the week
           <button onClick={handleRefresh}>Update</button>
-        </h2>
+        </Title>
       </Header>
 
       <hr />
