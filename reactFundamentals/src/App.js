@@ -6,7 +6,6 @@ import { ThemeProvider } from './ThemeContext';
 
 import styles from './App.scss';
 
-
 function App() {
   const [posts, setPosts] = useState([
     { id: Math.random(), title: 'Title#01', subtitle: 'Sub#01', likes: 20, read: false, removed: false },
