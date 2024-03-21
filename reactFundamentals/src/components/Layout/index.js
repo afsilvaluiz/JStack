@@ -1,15 +1,21 @@
 import React from 'react';
 
+import Footer from '../Footer';
 import Header from '../Header';
 import PostLists from '../PostList';
-import Footer from '../Footer';
 
-export default function Layout() {
+export default function Layout({ onToggleTheme, selectedTheme}) {
   return (
     <>
-      <Header />
+      <Header 
+        onToggleTheme={onToggleTheme}
+        selectedTheme={selectedTheme}        
+      />
       <PostLists />
-      <Footer />
+      <Footer 
+        onToggleTheme={onToggleTheme}
+        selectedTheme={selectedTheme}
+      />
     </>
   );
 }
