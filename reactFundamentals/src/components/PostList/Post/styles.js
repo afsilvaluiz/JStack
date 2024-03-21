@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.article`
-  background: #074D5E;
+  background: ${({ theme }) => theme.postBackgroundColor};
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -14,6 +14,7 @@ export const Container = styled.article`
 
    small {
     opacity: 0.7;
+    color: ${({ theme }) => theme.smallColor};
    }
 
    & + article {
