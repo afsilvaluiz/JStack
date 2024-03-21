@@ -2,6 +2,6 @@ import commonStyles from './common';
 
 export default {
   ...commonStyles,
-  backgroundColor: '#222',
+  backgroundColor: '#042331',
   textColor: '#fff',
 };
