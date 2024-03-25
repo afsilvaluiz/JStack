@@ -10,7 +10,7 @@ export default function Header({ onToggleTheme, selectedTheme }) {
         type="button" 
         onClick={onToggleTheme} 
       >
-        { selectedTheme === 'dark' ? '🌞' : '🌚'}
+        {selectedTheme === 'dark' ? '🌞' : '🌚'}
       </button>
     </Container>
   );
