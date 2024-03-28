@@ -13,6 +13,8 @@ class App extends React.Component {
     this.state = {
       theme: 'dark',
     };
+
+    this.handleToggleTheme = this.handleToggleTheme.bind(this);
   }
 
   handleToggleTheme() {
