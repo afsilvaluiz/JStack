@@ -7,33 +7,27 @@ import GlobalStyle from './styles/global';
 import themes from './styles/themes';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    theme: 'dark',
+  };
 
-    this.state = {
-      theme: 'dark',
-    };
+handleToggleTheme = () => {
+  this.setState(prevState => ({ theme: prevState.theme === 'dark' ? 'light' : 'dark' }));
+}
 
-    this.handleToggleTheme = this.handleToggleTheme.bind(this);
-  }
+render() {
+  const { theme } = this.state;
 
-  handleToggleTheme() {
-    this.setState(prevState => ({ theme: prevState.theme === 'dark' ? 'light' : 'dark' }));
-  }
-
-  render() {
-    const { theme } = this.state;
-
-    return (
-      <ThemeProvider theme={themes[theme] || themes.dark}>
-        <GlobalStyle />
-        <Layout
-          onToggleTheme={this.handleToggleTheme}
-          selectedTheme={theme}
-        />
-      </ThemeProvider>
-    );
-  }
+  return (
+    <ThemeProvider theme={themes[theme] || themes.dark}>
+      <GlobalStyle />
+      <Layout
+        onToggleTheme={this.handleToggleTheme}
+        selectedTheme={theme}
+      />
+    </ThemeProvider>
+  );
+}
 }
 
 // function App() {
