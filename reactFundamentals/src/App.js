@@ -12,7 +12,9 @@ class App extends React.Component {
   };
 
 handleToggleTheme = () => {
-  this.setState(prevState => ({ theme: prevState.theme === 'dark' ? 'light' : 'dark' }));
+  this.setState(prevState => ({ 
+    theme: prevState.theme === 'dark' ? 'light' : 'dark' 
+  }));
 }
 
 render() {
