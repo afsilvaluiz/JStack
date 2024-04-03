@@ -38,6 +38,10 @@ class App extends React.Component {
     return true;
   }
 
+  componentWillUnmount() {
+
+  }
+
 
 
   render() {
@@ -46,10 +50,14 @@ class App extends React.Component {
     return (
       <ThemeProvider>
         <ThemeContext.Consumer>
-          {({ theme }) => (
+          {({ theme, handleToggleTheme }) => (
             <StyledThemeProvider theme={themes[theme] || themes.dark}>
               <GlobalStyle />
-              <Layout />
+              <button onClick={handleToggleTheme}>
+                Change state
+              </button>
+              {theme === 'dark' && <Layout />}
+              <br /> <br /> <br /> <br /> <br /> <br />
             </StyledThemeProvider>
           )}
         </ThemeContext.Consumer>
