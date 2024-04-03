@@ -2,8 +2,8 @@ import React from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import Layout from './components/Layout';
+import { ThemeContext, ThemeProvider } from './contexts/ThemeContext';
 import GlobalStyle from './styles/global';
-import { ThemeProvider, ThemeContext } from './contexts/ThemeContext';
 
 import themes from './styles/themes';
 
@@ -26,6 +26,16 @@ class App extends React.Component {
 
   componentDidCatch(error, info) {
     console.log({ error, info });
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate', {
+      currentState: this.state,
+      nextState,
+      nextProps,
+    });
+
+    return true;
   }
 
 
