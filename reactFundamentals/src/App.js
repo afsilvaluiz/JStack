@@ -8,7 +8,19 @@ import { ThemeProvider, ThemeContext } from './contexts/ThemeContext';
 import themes from './styles/themes';
 
 class App extends React.Component {
+  state = {
+    changed: false,
+  };
+
+  componentDidMount() {
+    console.log('componentDidMount executed');
+  }
+
+  
+
   render() {
+    console.log('rendered');
+
     return (
       <ThemeProvider>
         <ThemeContext.Consumer>
