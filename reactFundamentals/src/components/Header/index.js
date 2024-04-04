@@ -4,26 +4,44 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { Container } from './styles';
 
+function HOC(ComponentHeader) {
+  return class Component extends React.Component {
+    render() {
+      return (
+        <ThemeContext.Consumer>
+          {(value) => (
+            <ComponentHeader {...value} />
+          )}
+        </ThemeContext.Consumer>
+      );
+    }
+  }
+}
+
 // render props
-export default class Header extends Component {
+class Header extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.theme !== prevProps.theme) {
+      console.log('theme changed')
+    }
+  }
+
   render() {
     return (
-      <ThemeContext.Consumer>
-        {(value) => (
-          <Container>
-            <h1>Haura's Blog</h1>
-            <button
-              type="button"
-              onClick={value.handleToggleTheme}
-            >
-              {value.theme === 'dark' ? '🌞' : '🌚'}
-            </button>
-          </Container>
-        )}
-      </ThemeContext.Consumer>
+      <Container>
+        <h1>Haura's Blog</h1>
+        <button
+          type="button"
+          onClick={this.props.handleToggleTheme}
+        >
+          {this.props.theme === 'dark' ? '🌞' : '🌚'}
+        </button>
+      </Container>
     );
   }
 }
+
+export default HOC(Header);
 
 // export default function Header({ onToggleTheme, selectedTheme }) {
 //   return (
